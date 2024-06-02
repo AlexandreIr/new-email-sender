@@ -19,13 +19,13 @@ public class EmailBean implements Serializable {
 	private EmailService emailService;
 	
 	public String sendEmail() {
-		emailService.send(null);
+		emailService.send(buildEmail());
 		return null;
 	}
 	
 	private Email buildEmail() {
 		EmailLayout layout = new EmailLayout();
-		return layout.emailBuilderAdm(null, null);
+		return layout.emailBuilderAdm("alex.silva250@hotmail.com", "Cadastro aprovado!");
 	}
 
 }

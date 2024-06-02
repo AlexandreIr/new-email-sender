@@ -1,5 +1,11 @@
 package com.emailproject.util;
 
-public class LogUtil {
+import org.apache.log4j.Logger;
 
+public class LogUtil {
+	private LogUtil() {}
+	
+	public static Logger getLogger(Object obj) {
+		return Logger.getLogger(obj.getClass());
+	}
 }
